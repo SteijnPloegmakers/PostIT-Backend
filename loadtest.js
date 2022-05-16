@@ -27,7 +27,3 @@ export default () => {
     })
     sleep(1);
 }
-
-//Spike Test
-
-//Stress Test
