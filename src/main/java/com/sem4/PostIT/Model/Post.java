@@ -20,7 +20,7 @@ public class Post {
     private String description;
 
     @Column
-    private String UserId;
+    private String userId;
 
     public UUID getId() {
         return id;
@@ -47,10 +47,10 @@ public class Post {
     }
 
     public String getUserId() {
-        return UserId;
+        return userId;
     }
 
     public void setUserId(String userId) {
-        UserId = userId;
+        this.userId = userId;
     }
 }
