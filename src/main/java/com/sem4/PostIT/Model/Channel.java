@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.util.UUID;
 
 @Entity
-public class Post {
+public class Channel {
 
     @Id
     @GeneratedValue
@@ -18,20 +18,6 @@ public class Post {
 
     @Column
     private String description;
-
-    @Column
-    private String userId;
-
-    @Column
-    private String channelId;
-
-    public String getChannelId() {
-        return channelId;
-    }
-
-    public void setChannelId(String channelId) {
-        this.channelId = channelId;
-    }
 
     public UUID getId() {
         return id;
@@ -57,11 +43,15 @@ public class Post {
         this.description = description;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getAccountId() {
+        return accountId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
     }
+
+    @Column
+    private String accountId;
+
 }

@@ -1,19 +1,20 @@
 package com.sem4.PostIT.Service;
 
+import com.sem4.PostIT.Model.Channel;
 import com.sem4.PostIT.Model.Comment;
-import com.sem4.PostIT.Repo.CommentRepo;
+import com.sem4.PostIT.Repo.ChannelRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class CommentService {
+public class ChannelService {
 
     @Autowired
-    private CommentRepo commentRepo;
+    private ChannelRepo channelRepo;
 
-    public List<Comment> getAllComments(){
-        return commentRepo.findAll();
+    public List<Channel> getAllComments(){
+        return channelRepo.findAll();
     }
 }
