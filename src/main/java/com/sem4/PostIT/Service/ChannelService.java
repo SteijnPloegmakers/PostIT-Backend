@@ -14,7 +14,7 @@ public class ChannelService {
     @Autowired
     private ChannelRepo channelRepo;
 
-    public List<Channel> getAllComments(){
+    public List<Channel> getAllChannels(){
         return channelRepo.findAll();
     }
 }

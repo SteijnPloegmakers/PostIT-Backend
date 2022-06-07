@@ -11,7 +11,7 @@ public class Post {
 
     @Id
     @GeneratedValue
-    private UUID id;
+    private UUID postId;
 
     @Column
     private String title;
@@ -34,11 +34,11 @@ public class Post {
     }
 
     public UUID getId() {
-        return id;
+        return postId;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
+    public void setId(UUID postId) {
+        this.postId = postId;
     }
 
     public String getTitle() {

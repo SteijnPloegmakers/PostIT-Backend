@@ -11,7 +11,7 @@ public class Comment {
 
     @Id
     @GeneratedValue
-    private UUID id;
+    private UUID commentId;
 
     @Column
     private String content;
@@ -23,11 +23,11 @@ public class Comment {
     private String userId;
 
     public UUID getCommentId() {
-        return id;
+        return commentId;
     }
 
-    public void setCommentId(UUID Id) {
-        this.id = Id;
+    public void setCommentId(UUID commentId) {
+        this.commentId = commentId;
     }
 
     public String getContent() {

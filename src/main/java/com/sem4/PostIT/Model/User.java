@@ -13,7 +13,7 @@ public class User {
 
     @Id
     @GeneratedValue
-    private UUID id;
+    private UUID userId;
 
     @Column
     @NotNull
@@ -28,11 +28,11 @@ public class User {
     private String email;
 
     public UUID getId() {
-        return id;
+        return userId;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
+    public void setId(UUID userId) {
+        this.userId = userId;
     }
 
     public String getGoogleId() {

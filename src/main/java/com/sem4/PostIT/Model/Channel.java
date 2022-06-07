@@ -1,9 +1,6 @@
 package com.sem4.PostIT.Model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
@@ -11,7 +8,7 @@ public class Channel {
 
     @Id
     @GeneratedValue
-    private UUID id;
+    private UUID channelId;
 
     @Column
     private String title;
@@ -19,12 +16,15 @@ public class Channel {
     @Column
     private String description;
 
+    @Column
+    private String userId;
+
     public UUID getId() {
-        return id;
+        return channelId;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
+    public void setId(UUID channelId) {
+        this.channelId = channelId;
     }
 
     public String getTitle() {
@@ -43,15 +43,11 @@ public class Channel {
         this.description = description;
     }
 
-    public String getAccountId() {
-        return accountId;
+    public String getUser() {
+        return userId;
     }
 
-    public void setAccountId(String accountId) {
-        this.accountId = accountId;
+    public void setUser(String userId) {
+        this.userId = userId;
     }
-
-    @Column
-    private String accountId;
-
 }
